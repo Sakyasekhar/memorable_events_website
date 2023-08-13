@@ -1,0 +1,601 @@
+*{                      /* applicable to all elements so here we will not get any white spaces */
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-display: swap; /* or optional */
+    src: url('path/to/your/font.woff2') format('woff2');
+    /* other font properties */
+}
+
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/cover2.jpg);  /*this is the reason for it*/
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    
+}
+nav a {
+    width: 17%;
+}
+
+nav img{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    
+}
+
+.image-container {
+    position: relative;
+    display: inline-block; /* or block if it's not already block-level */
+  }
+  
+  .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Adjust opacity here (0.5 = 50% transparency) */
+  }
+  
+
+.nav-links {
+   flex: 1;   /*Let all the flexible items be the same length, regardless of its content: */
+   text-align: right;
+    
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;  /* its like converting div to span  */
+    padding: 8px 12px;
+    text-align: right;       
+}
+
+.nav-links ul li a {       /* or we can write a class  */
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+    
+}
+
+/* nav tag: set of navigation links */
+
+.nav-links ul li::after{
+    content:'';
+    display: block;
+    
+    width: 0%;
+    height: 2px;
+    background: #8673b9;
+   
+    margin-top: 8px;
+    transition: 0.5s ;
+}
+
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
+#name{
+    color: white;
+}
+
+.front-text{
+    color:white;
+    width: 90%;
+    margin-top:0px;
+    text-align: center;
+    transform: translate(5%,100%);
+}
+
+.front-text2{
+    color:white;
+    width: 90%;
+    text-align: center;
+    transform: translate(5%,100%);
+}
+
+.front-text h1{
+    font-size: 62px;
+    
+}
+
+.front-text2 h1{
+    font-size: 62px;
+    
+}
+
+#sub-text{
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.vist-us{
+    
+    text-decoration: none ;
+    color: white;
+    padding: 12px 34px;
+    
+    border: 1px solid white;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.vist-us:hover{
+    border: 1px solid #8673b9;
+    background-color:#8673b9;
+    transition: 0.5s ease-in-out;
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width:700px){           /*Using flex together with media queries to create a different layout 
+                                        for different screen sizes/devices  */
+    
+    .front-text h1{
+        font-size: 20px;    
+    }
+    .nav-links ul li{
+        display: block; /*like converting span to div   */
+        
+        
+    }
+
+
+    .nav-links {
+        position: fixed;  /*absolute== position of is fix that is even if we resize window it will not change   */
+        width: 200px;
+        height:100vh ;
+        background-color: #8673b9;
+        top: 0;      /* move the orange 
+                       block       */
+        right: -200px; /* hiding the menu */
+        z-index: 2;  /* */
+        transition: 1s;
+        text-align: left; 
+              
+        
+    }
+    nav .fa{
+        display: block;
+        margin: 20px;
+        cursor: pointer;
+        color: white;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+
+}
+
+
+/* events*/
+
+.events{
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #777;
+    padding-top: 20px;
+}
+
+.row{
+    
+    display: flex;
+    margin: 5% 10% 5% 10%; /*for total div*/
+    justify-content: space-between; 
+    left: 0; 
+    right: 0;
+}
+
+.events-col{     /*The flex-basis(effects width of items) property specifies the initial length of a flexible item.*/
+                  /* flex-grow effects width of items but with respective each other (1,3,1,1)*/ 
+   flex-basis: 31%;
+   background: #eae1f2;
+   margin: 0 15px;
+   padding: 20px 30px;
+   transition: 0.5s;
+   box-sizing: border-box; 
+   border-radius: 10px;               
+}
+
+h3{  text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+    position: relative;
+}
+
+.events-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    transform: translate(0,-5%);
+}
+
+.gallery{
+    background-color:#FFFF;
+    width: 80%;
+    margin: auto;
+    font-size: 36px;  
+    font-family: 'Patrick Hand SC', cursive;
+    font-weight:400px;
+  }
+
+.photogallery{
+    width: 100%;
+    margin: auto;
+} 
+  
+  .photogallery img {
+    border-radius: 10px;
+    width:32.4%;
+    height:auto;
+    margin: 5px;
+    transition:all 0.8s ease;
+  }
+  
+  .photogallery img:hover {
+    transform:scale(1.2);
+  }
+  
+  .photogallery {
+    display:flex;
+    align-content: flex-start;
+    flex-flow: row wrap;
+  }
+
+@media(max-width: 700px) {
+    .row{
+        flex-direction: column;
+    }
+    .courses-col{
+        margin: 10% 0;
+    }
+}
+    
+
+
+/* campus*/
+
+.campus{ 
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus-col{
+   flex-basis: 32%;  /*image should be adjusted*/
+   position: relative;
+   overflow: hidden;     /* curved corners */
+   border-radius: 10px; 
+   margin: 10px 0;           
+}
+
+.campus-col img{
+    width: 100%;
+    display: block; /* as the curves at bottom a removing we use this */ 
+}
+  
+
+
+
+/* services*/
+.services{
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.services-col{
+    flex-basis: 31%;  /* only flex will effect but not image */  
+    margin-top: 40px;
+}
+
+.services-col img{
+    width: 100%;
+    height: 58%;
+    border-radius: 10px;
+}
+
+.services-col h3{
+    text-align: left;
+    margin-top: 20px;
+}
+
+
+.testimonial{
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.testimonial-col{
+    flex-basis: 44%;
+    text-align: left;
+    border-radius: 5%;
+    background:#eae1f2 ;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonial-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+
+.testimonial-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.testimonial-col .fa{
+    color: #8673b9;
+}
+
+@media(max-width:700px){
+    .testimonial-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+        border-radius: 50%;
+    }
+}
+
+
+/*cta*/
+
+.cta{
+    margin: 100px auto;
+    width:80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1{
+    color: white;
+    margin-bottom: 40px;
+    
+}
+
+@media(max-width:700px){
+.cta h1{
+    font-size: 24px;
+}
+}
+
+
+/* footer*/
+.footer {
+    width:100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+
+.icons .fa{             /*fa=for the icons */
+     color: #8673b9;
+     margin: 0 13px;
+     cursor: pointer;
+     padding: 18px 0;
+}
+
+.fa-heart{
+    color: #8673b9;
+}
+
+.sub-header{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/about.jpeg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-header3{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/cover.jpeg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-header4{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/offerings.avif);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-header5{
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/contact.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* about*/
+.aboutus{
+    margin: auto;
+    
+}
+
+.about-col{
+    flex-basis: 48%;
+    
+}
+.about-col2{
+    margin: auto;
+    flex-basis: 48%;
+    
+}
+.about-col2 img{
+    width: 100%;
+    height: 300px;
+}
+.about-col h1{
+    padding: 0;
+}
+.about-col p{
+    padding: 15px 25px;
+}
+
+
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    margin: auto;
+  }
+
+
+
+
+
+
+
+
+/* contact*/
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe{
+    width: 100%;
+}
+
+.roww{
+    width: 80%;
+    margin: auto;
+}
+
+.contact-col{
+    
+    flex-basis: 48%;
+    margin-bottom: 30px;
+
+}
+
+.contact-col div{
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 40px;
+}
+
+.contact-col .fa{
+    font-size: 28px;
+    color: #8673b9;
+    margin-right: 20px;
+}
+
+.contact-col p{
+    padding: 0;
+}
+
+.contact-col h5{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+
+.outplants
+{   
+    margin: 30px 0;
+}
+.col-3{
+    flex-basis:25%;
+    padding: 10px;
+    min-width: 33%;
+    }
+    .col-3 img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .small-container{
+        max-width: 90%;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+
+
+
+
+    .comment-box{
+        width: 60%;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin: auto;
+        padding: 10px 20px ;
+    
+    }
+    
+    .comment-box h3{
+        text-align: left;
+    }
+    
+    .textbar, .comment-form textarea,#event_type{
+        width: 100%;
+        padding: 10px 1px;
+        margin: 15px 0;
+        border: none;
+        background: #f0f0f0;
+    
+    }
+    
+    .comment-form button{
+        margin:10px 0;
+    }

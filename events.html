@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+         <link rel="stylesheet" href="style.css">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+        </head>
+    <body>
+        <section class="sub-header3">
+        <nav> 
+            
+            <a href="home.html"><img src="images/logo.jpg" ></a>
+            <div class="nav-links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()" ></i>
+            <ul>
+                
+                <li><a href="home.php">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#">EVENTS</a></li>
+                <li><a href="offerings.php">OFFERINGS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+
+            </ul>
+
+            </div>
+
+            <i class="fa fa-bars" onclick="showmenu()" ></i>  
+        </nav>
+        <div class="front-text2">
+            <h1>Our Events</h1>
+        </div>
+        </section>
+
+<!--- events-->
+<section class="events">
+    <h1>Experience Extraordinary Events with us</h1>
+    <p >We mainly offer three type of events</p>
+<div class="row">
+    <div class="events-col">
+        <h3>Weddings: Love in Every Detail</h3>
+        <p>A wedding is a celebration of love, and we are committed to making it a cherished memory for a lifetime. With a keen eye for detail and a passion for perfection, we design weddings that reflect your unique style and personality. From intimate ceremonies to grand affairs, our team ensures that every moment of your special day is filled with joy, romance, and enchantment.</p>
+    </div>
+    <div class="events-col">
+        <h3>Themed Events: Unleashing Creativity</h3>
+        <p>Let your imagination run wild, and we'll transform your vision into reality. Whether it's a fairytale-themed gala, a retro-inspired party, or a futuristic corporate event, we specialize in bringing themed ideas to life. Our team meticulously plans every detail to ensure an immersive and captivating experience that will transport your guests to a world of wonder.</p>
+    </div>
+    <div class="events-col">
+        <h3>Social Gatherings: Celebrate Life's Moments</h3>
+        <p>Life is full of special moments worth celebrating, and we're here to make each one remarkable. Whether it's a birthday bash, a momentous jubilee, or a themed party, our event organizers infuse creativity and innovation to create magical experiences. Let us handle the planning and execution, so you can relax and enjoy the festivities with your loved ones.</p>
+    </div>
+</div>
+</section>
+
+
+
+
+<!-- services-->
+<section class="services">
+    <h1>Our Services</h1>
+<div class="row">
+        <div class="services-col">
+            <img src="images/wedding.jpeg" alt="">
+            <h3>Weddings</h3>
+            <p>Bring your dream wedding to life with our expert wedding planning services. From intimate ceremonies to grand celebrations, we handle every detail, ensuring an unforgettable journey of love and joy. Choose full-service planning for stress-free arrangements or day-of coordination for a seamless experience. Destination wedding? Let us create magic in the location of your choice.</p>
+        </div>
+   
+        <div class="services-col">
+            <img src="images/birthday.jpeg" alt="">
+            <h3>Birthday</h3>
+            <p>Celebrate with style! Our birthday event planning caters to all ages. For kids' parties, we create magical experiences with themed fun and games. Commemorate milestones with elegance and surprise loved ones with our heartfelt, memorable celebrations.</p>
+        </div>
+   
+        <div class="services-col">
+            <img src="images/special.avif" alt="">
+            <h3>Special Events</h3>
+            <p>Let us elevate your events. From corporate functions to community gatherings, we ensure flawless execution and unforgettable experiences. Impress clients with impactful corporate events. Strengthen community bonds with engaging gatherings. Immerse guests in enchanting themed parties.</p>
+        </div>
+</div>
+
+<div class="gallery">
+    <h1>Gallery</h1>
+    <div class="photogallery">
+      <img src="images/1.jpeg">
+      <img src="images/2.jpeg">
+      <img src="images/3.jpeg">
+      <img src="images/4.jpeg">
+      <img src="images/5.jpeg">
+      <img src="images/6.jpeg">
+      <img src="images/7.jpeg">
+      <img src="images/8.jpeg">
+      <img src="images/9.jpeg">
+    </div>
+</div>
+
+</section>
+
+
+
+
+
+
+
+        
+<!---footer--> 
+<section class="footer">
+    <h4>Connect With Us</h4>
+    <div class="icons">
+       <i class="fa fa-facebook" ></i>
+       <i class="fa fa-twitter" ></i>
+       <i class="fa fa-instagram" ></i>
+       <i class="fa fa-linkedin" ></i>
+    </div>
+
+
+</section>  
+
+<script> 
+var navlinks=document.getElementById("navlinks");
+function showmenu(){
+navlinks.style.right="0";
+    }
+function hideMenu(){
+navlinks.style.right="-200px";
+ }
+</script>
+
+</body>
+</html>

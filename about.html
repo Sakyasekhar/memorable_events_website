@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+         <link rel="stylesheet" href="style.css">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+        </head>
+    <body>
+        <section class="sub-header">
+        <nav> 
+            
+            <a href="home.html"><img src="images/logo.jpg" ></a>
+            <div class="nav-links" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()" ></i>
+            <ul>
+                
+                <li><a href="home.php">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="offerings.php">OFFERINGS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+
+            </ul>
+
+            </div>
+
+            <i class="fa fa-bars" onclick="showmenu()" ></i>  
+        </nav>
+        <div class="front-text2">
+            <h1>About Us</h1>
+        </div>
+        </section> 
+        
+        
+
+ <section class="aboutus">
+    <div class="row">
+            <div>
+            <h1>Welcome to Memorable Events!</h1>
+            <p>At Memorable Events, we are your one-stop destination for all your event planning needs. Our dedicated team of professionals is passionate about creating extraordinary experiences that will leave a lasting impression on you and your guests. With a wealth of expertise and a commitment to excellence, we strive to turn your vision into reality and make your special moments truly unforgettable.</p>
+            </div>
+    </div>
+
+    <div class="row">
+            <div class="about-col">
+             <h1>Our Approach:</h1>
+             <p>At the heart of our approach is a dedication to delivering personalized and customized events. We understand that every event is unique, and we take the time to listen to your needs and preferences, tailoring each aspect of the event to reflect your style and personality. From intimate gatherings to grand celebrations, we take pride in crafting events that are a true reflection of your vision.</p>
+            
+            </div>
+            <div class="about-col2">
+                <img src="images/Our Approach.jpeg" >
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="about-col2">
+            <img src="images/Our service.jpg" >
+        </div>
+        <div class="about-col">
+         <h1>Our Services:</h1>
+         <p>Our range of event planning services covers a variety of occasions, including weddings, corporate events, social gatherings, and more. With years of experience under our belt, we have honed our skills in every aspect of event management, ensuring flawless execution and attention to every detail. Let us handle the logistics and coordination, so you can focus on enjoying your event to the fullest.</p>
+        
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="about-col">
+         <h1>Customer-Centric Approach:</h1>
+         <p>At Memorable Events, our customers are at the heart of everything we do. We believe in building strong and lasting relationships with our clients, understanding their needs and expectations, and going above and beyond to exceed them. Our commitment to exceptional customer service and our dedication to making your event a resounding success is what sets us apart.</p>
+        </div>
+        <div class="about-col2">
+            <img src="images/customer-centric.jpeg" >
+        </div>   
+    </div>
+
+    <div class="row">
+        <div class="about-col2">
+            <img src="images/experience.jpg" >
+        </div>
+        <div class="about-col">
+         <h1>Experience and Expertise:</h1>
+         <p>Our team of talented event planners is armed with the experience and expertise to create magical moments that will be cherished for a lifetime. We have successfully executed a wide range of events, earning the trust and satisfaction of our clients. From conceptualization to execution, we handle every aspect with precision and creativity, ensuring an unparalleled event experience.</p>
+        
+        </div>
+    </div>
+
+
+</div>
+ </section>       
+
+
+<!---footer--> 
+        <section class="footer">
+            <h4>Connect With Us</h4>
+            <div class="icons">
+               <i class="fa fa-facebook" ></i>
+               <i class="fa fa-twitter" ></i>
+               <i class="fa fa-instagram" ></i>
+               <i class="fa fa-linkedin" ></i>
+            </div>
+       
+       
+        </section>  
+
+<script> 
+var navlinks=document.getElementById("navlinks");
+function showmenu(){
+ navlinks.style.right="0";
+            }
+function hideMenu(){
+    navlinks.style.right="-200px";
+         }
+</script>
+       
+</body>
+</html>
